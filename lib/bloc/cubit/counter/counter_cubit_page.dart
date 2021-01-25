@@ -8,29 +8,63 @@ class CounterCubitPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(title: const Text('Counter Cubit Bloc')),
+        appBar: AppBar(title: const Text('Counter Cubit Bloc Double CTest')),
         body: BlocBuilder<CounterCubit, CounterCubitState>(
           builder: (context, state) => Column(
+            
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Text('Bakers Dozen: ${state.dozcount}',
-                style: Theme.of(context).textTheme.headline3,
-                textAlign: TextAlign.center,
+          
+          
+              children: [
+             
+              IconButton(
+                icon: Icon(Icons.add_circle),
+                color: Colors.black,
+                iconSize: 25,
+                onPressed: () => context.read<CounterCubit>().increment(),
               ),
-              Text('Singles: ${state.singcount}',
-                style: Theme.of(context).textTheme.headline3,
-                textAlign: TextAlign.center,
-              ),
-              const SizedBox(height: 8),
               Text(
+                '${state.totalbagels}',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+              IconButton(
+                icon: Icon(Icons.remove_circle),
+                color: Colors.black,
+                iconSize: 25,
+                onPressed: () => context.read<CounterCubit>().decrement(),
+              ),
+            
+              /* Row(
+            children: [
+              Text(
+                'BDz:$_bakerdoz',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+              Text(
+                ' TB=:$_totalbagels',
+                style: Theme.of(context).textTheme.headline4,
+              ),
+            ],
+          ), */
+
+              /* Text('Bakers Dozen: ${state.dozcount}',
+                style: Theme.of(context).textTheme.headline3,
+                textAlign: TextAlign.center,
+              ), */
+              /* Text('Singles: ${state.singcount}',
+                style: Theme.of(context).textTheme.headline3,
+                textAlign: TextAlign.center,
+              ), */
+              const SizedBox(height: 8),
+              /* Text(
                 'Total Bagels: ${state.totalbagels}',
                 style: Theme.of(context).textTheme.headline3.copyWith(
                       color: Colors.black,
                     ),
                 textAlign: TextAlign.center,
-              ),
-              
+              ), */
+
               // add second windows of bagels
               Divider(
                 height: 20,
@@ -38,29 +72,28 @@ class CounterCubitPage extends StatelessWidget {
                 color: Colors.black,
               ),
 
-              Text('Bakers Dozen: ${state.dozcount}',
+              Text(
+                'Bakers Dozen: ${state.dozcount}',
                 style: Theme.of(context).textTheme.headline3,
                 textAlign: TextAlign.center,
               ),
-              Text('Singles: ${state.singcount}',
+              Text(
+                'Singles: ${state.singcount}',
                 style: Theme.of(context).textTheme.headline3,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 8),
-              Text(
+              /*  Text(
                 'Total Bagels: ${state.totalbagels}',
                 style: Theme.of(context).textTheme.headline3.copyWith(
                       color: Colors.black,
                     ),
                 textAlign: TextAlign.center,
-              ),
-              
-
-
+              ), */
             ],
           ),
         ),
-        floatingActionButton: Column(
+        /* floatingActionButton: Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
@@ -87,6 +120,6 @@ class CounterCubitPage extends StatelessWidget {
               ),
             ),
           ],
-        ),
+        ), */
       );
 }
