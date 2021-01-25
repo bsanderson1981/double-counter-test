@@ -20,7 +20,7 @@ class CounterCubitPage extends StatelessWidget {
              
               IconButton(
                 icon: Icon(Icons.add_circle),
-                color: Colors.black,
+                color: Colors.blue,
                 iconSize: 25,
                 onPressed: () => context.read<CounterCubit>().increment(),
               ),
@@ -30,7 +30,7 @@ class CounterCubitPage extends StatelessWidget {
               ),
               IconButton(
                 icon: Icon(Icons.remove_circle),
-                color: Colors.black,
+                color: Colors.blue,
                 iconSize: 25,
                 onPressed: () => context.read<CounterCubit>().decrement(),
               ),
