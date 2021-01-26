@@ -95,7 +95,7 @@ class CounterCubitPage extends StatelessWidget {
               
                   children: [
                  
-                  Row(
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       IconButton(
                         icon: Icon(Icons.add_circle),
