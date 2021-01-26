@@ -36,35 +36,11 @@ class CounterCubitPage extends StatelessWidget {
                   ),
                     ],
                  ),
-                  /* Row(
-                children: [
-                  Text(
-                    'BDz:$_bakerdoz',
-                    style: Theme.of(context).textTheme.headline4,
-                  ),
-                  Text(
-                    ' TB=:$_totalbagels',
-                    style: Theme.of(context).textTheme.headline4,
-                  ),
-                ],
-              ), */
+                  
 
-                  /* Text('Bakers Dozen: ${state.dozcount}',
-                    style: Theme.of(context).textTheme.headline3,
-                    textAlign: TextAlign.center,
-                  ), */
-                  /* Text('Singles: ${state.singcount}',
-                    style: Theme.of(context).textTheme.headline3,
-                    textAlign: TextAlign.center,
-                  ), */
+                 /* 
                   const SizedBox(height: 8),
-                  /* Text(
-                    'Total Bagels: ${state.totalbagels}',
-                    style: Theme.of(context).textTheme.headline3.copyWith(
-                          color: Colors.black,
-                        ),
-                    textAlign: TextAlign.center,
-                  ), */
+                 
 
                   // add second windows of bagels
                   Divider(
@@ -83,46 +59,10 @@ class CounterCubitPage extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline3,
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(height: 8),
-                  /*  Text(
-                    'Total Bagels: ${state.totalbagels}',
-                    style: Theme.of(context).textTheme.headline3.copyWith(
-                          color: Colors.black,
-                        ),
-                    textAlign: TextAlign.center,
-                  ), */
+                  const SizedBox(height: 8), */
+                  
                 ],
               ),
-          
-         
         ),
-        /* floatingActionButton: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5.0),
-              child: FloatingActionButton(
-                backgroundColor: Colors.orange,
-                heroTag: 'increment',
-                child: const Icon(Icons.add),
-                onPressed: () => context.read<CounterCubit>().increment(),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5.0),
-              child: FloatingActionButton(
-                backgroundColor: Colors.teal,
-                heroTag: 'decrement',
-                child: const Icon(Icons.remove),
-                onPressed: () {
-                  // BlocProvider.of<CounterCubit>(context, listen: false)
-                  //     .decrement();
-                  context.read<CounterCubit>().decrement();
-                },
-              ),
-            ),
-          ],
-        ), */
       );
 }
